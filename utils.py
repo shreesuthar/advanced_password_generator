@@ -32,3 +32,20 @@ def save_password(password):
 
     with open("passwords.txt", "a") as file:
         file.write(password + "\n")
+
+
+def view_passwords():
+
+    try:
+        with open("passwords.txt", "r") as file:
+            passwords = file.readlines()
+
+        if not passwords:
+            print("No saved passwords.")
+        else:
+            print("\nSaved Passwords:")
+            for p in passwords:
+                print(p.strip())
+
+    except FileNotFoundError:
+        print("No passwords saved yet.")
