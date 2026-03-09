@@ -11,3 +11,6 @@ Technologies:
 - Python
 - random module
 - CLI inputs
+
+Installation:
+pip install pyperclip
